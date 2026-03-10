@@ -995,3 +995,53 @@ body {
     border-left: 3px solid #00ff00;
     background: rgba(0, 255, 0, 0.05);
 }
+/* --- RESPONSYWNOŚĆ (MOBILE) --- */
+@media (max-width: 768px) {
+    /* Nawigacja - układ pionowy, żeby linki się nie nakładały */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .menu a {
+        font-size: 0.6rem; /* Mniejszy tekst w menu na telefonie */
+    }
+
+    /* Siatka zespołów - 1 karta na całą szerokość ekranu */
+    .teams-grid {
+        grid-template-columns: 1fr; 
+        padding: 15px;
+        gap: 20px;
+    }
+
+    /* Poprawka kart, żeby nie były "chude" */
+    .team-card {
+        min-height: auto;
+        padding: 20px;
+    }
+
+    /* Nagłówek PARTICIPATING TEAMS */
+    .page-title {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    /* Player Live na telefonie */
+    .stream-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main-video {
+        height: 250px; /* Wysokość playera na telefonie */
+    }
+}
